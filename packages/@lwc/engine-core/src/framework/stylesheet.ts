@@ -201,7 +201,7 @@ function getNearestNativeShadowComponent(vm: VM): VM | null {
 
 export function createStylesheet(vm: VM, stylesheets: string[]): VNode | null {
     const { renderMode, shadowMode, renderer } = vm;
-    const { insertGlobalStylesheet, ssr, isHydrating, insertStylesheet } = renderer;
+    const { ssr, insertStylesheet } = renderer;
     if (renderMode === RenderMode.Shadow && shadowMode === ShadowMode.Synthetic) {
         for (let i = 0; i < stylesheets.length; i++) {
             insertStylesheet(stylesheets[i]);

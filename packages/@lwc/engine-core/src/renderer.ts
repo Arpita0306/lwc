@@ -153,7 +153,7 @@ export let getLastElementChild: getLastElementChildFunc;
 type isConnectedFunc = (node: N) => boolean;
 export let isConnected: isConnectedFunc;
 
-type insertStylesheetFunc = (content: string, target: ShadowRoot) => void;
+type insertStylesheetFunc = (content: string, target?: ShadowRoot) => void;
 export let insertStylesheet: insertStylesheetFunc;
 
 type assertInstanceOfHTMLElementFunc = (elm: any, msg: string) => void;
